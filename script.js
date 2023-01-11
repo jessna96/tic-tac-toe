@@ -15,7 +15,7 @@ const playerNames = {
 }
 
 const gameOutcomeToMessage = {
-    [gameOutcome.tie]: () => "It's a tie!",
+    [gameOutcome.tie]: () => "It's a draw!",
     [gameOutcome.winPlayer1]: () => `${playerNames.player1} wins!`,
     [gameOutcome.winPlayer2]: () => `${playerNames.player2} wins!`,
 }
