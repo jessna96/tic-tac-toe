@@ -107,7 +107,7 @@ const game = (function () {
     const setMarker = (event) => {
         if (playerTurn) {
             const selectedFieldIndex = event.target.getAttribute('id').split('_')[1];
-            gBoard.updateGameBoard(selectedFieldIndex, numberToMarker[playerTurn.marker]);
+            gBoard.updateGameBoard(selectedFieldIndex, numberToMarker['player' + playerTurn.marker + 'ID']);
             playerTurn.addMarker(parseInt(selectedFieldIndex) + 1);
             renderBoard();
             checkForGameOver(playerTurn.getMarkers());
@@ -180,15 +180,15 @@ const startButton = () =>
 
 const playerDiv = (playerNr) => {
     return `<div class="player" id="player${playerNr}">
-                <label for="name_player_${playerNr}">Player - ${numberToMarker[playerNr]}:</label> <input type="text" name="name_player_${playerNr}" value="Name"
+                <label for="name_player_${playerNr}">Player - ${numberToMarker['player' + playerNr + 'ID']}:</label> <input type="text" name="name_player_${playerNr}" value="Name_${playerNr}"
                                                                          id="name_player_${playerNr}">
             </div>`;
 }
 
 const playerOverview = () => {
     return `<div class="player_names">
-            ${playerDiv('player1ID')}
-            ${playerDiv('player2ID')}
+            ${playerDiv('1')}
+            ${playerDiv('2')}
         </div>`;
 }
 
