@@ -187,8 +187,8 @@ const playerDiv = (playerNr) => {
 
 const playerOverview = () => {
     return `<div class="player_names">
-            ${playerDiv('1')}
-            ${playerDiv('2')}
+            ${playerDiv(1)}
+            ${playerDiv(2)}
         </div>`;
 }
 
