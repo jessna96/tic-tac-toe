@@ -180,7 +180,7 @@ const startButton = () =>
 
 const playerDiv = (playerNr) => {
     return `<div class="player" id="player${playerNr}">
-                <label for="name_player_${playerNr}">Player - ${numberToMarker[playerNr]}:</label> <input type="text" name="name_player_${playerNr}" value="Name ${playerNr}"
+                <label for="name_player_${playerNr}">Player - ${numberToMarker[playerNr]}:</label> <input type="text" name="name_player_${playerNr}" value="Name"
                                                                          id="name_player_${playerNr}">
             </div>`;
 }
